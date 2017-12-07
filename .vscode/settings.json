@@ -1,0 +1,18 @@
+{
+  "editor.formatOnSave": true,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": false,
+  "javascript.validate.enable": false,
+  "cSpell.words": [
+    "abumalick",
+    "babel",
+    "flow",
+    "flowtype",
+    "jsx",
+    "netlify",
+    "plugin",
+    "proptypes",
+    "react",
+    "tachyons",
+    "unlicense"
+  ]
+}

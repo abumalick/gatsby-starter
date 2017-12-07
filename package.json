@@ -1,0 +1,46 @@
+{
+  "name": "gatsby-boilerplate",
+  "description":
+    "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
+  "version": "1",
+  "author": "abumalick",
+  "license": "Unlicense",
+  "scripts": {
+    "build": "gatsby build",
+    "clean": "rimraf ./public",
+    "preview":
+      "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
+    "start": "gatsby develop -H localhost"
+  },
+  "dependencies": {
+    "emotion": "^8.0.9",
+    "emotion-server": "^8.0.9",
+    "flow-bin": "^0.58.0",
+    "gatsby": "^1.9.119",
+    "gatsby-link": "^1.6.28",
+    "gatsby-plugin-emotion": "^1.1.8",
+    "gatsby-plugin-netlify": "^1.0.8",
+    "gatsby-plugin-react-helmet": "^2.0.1",
+    "prop-types": "^15.5.10",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-emotion": "^8.0.9",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.7",
+    "rimraf": "^2.6.1",
+    "tachyons": "^4.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-plugin-flow-react-proptypes": "^8.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^3.19.0 || ^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  }
+}

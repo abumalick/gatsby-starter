@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "xabikos.javascriptsnippets",
+    "xabikos.reactsnippets",
+    "dbaeumer.vscode-eslint",
+    "streetsidesoftware.code-spell-checker",
+    "formulahendry.auto-close-tag",
+    "msjsdiag.debugger-for-chrome",
+    "qezhu.gitlink",
+    "2gua.rainbow-brackets",
+    "gcazaciuc.vscode-flow-ide"
+  ]
+}
