@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-boilerplate",
+  "name": "gatsby-starter",
   "description":
     "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
-  "version": "1",
+  "version": "1.0.0",
   "author": "abumalick",
   "license": "Unlicense",
   "scripts": {
@@ -11,6 +11,7 @@
     "commit": "git-cz",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:scss": "stylelint --syntax=scss ./src/**/*.scss",
+    "lint:js": "eslint .",
     "preview":
       "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
     "start": "gatsby develop -H localhost",
