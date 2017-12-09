@@ -8,12 +8,18 @@
   "scripts": {
     "build": "gatsby build",
     "clean": "rimraf ./public",
+    "commit": "git-cz",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:scss": "stylelint --syntax=scss ./src/**/*.scss",
     "preview":
       "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
     "start": "gatsby develop -H localhost",
     "test:security": "nsp check"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "emotion": "^8.0.9",
@@ -38,6 +44,8 @@
     "babel-eslint": "^8.0.1",
     "babel-plugin-flow-react-proptypes": "^8.0.0",
     "babel-preset-flow": "^6.23.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
     "eslint": "^3.19.0 || ^4.3.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.3.0",
