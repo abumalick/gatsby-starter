@@ -10,8 +10,10 @@
     "jsx",
     "netlify",
     "plugin",
+    "precommit",
     "proptypes",
     "react",
+    "stylelint",
     "tachyons",
     "unlicense"
   ]
