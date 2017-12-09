@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-boilerplate",
+  "name": "gatsby-starter",
   "description":
     "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
   "version": "1.0.0",

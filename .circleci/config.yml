@@ -1,0 +1,70 @@
+version: 2
+jobs:
+  install_dependencies:
+    docker:
+      - image: circleci/node:8.9.2
+    working_directory: ~/circleci-deployment
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-{{ .Branch }}
+            - yarn-cache-
+      - run: yarn
+      - save_cache:
+          key: yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths: node_modules
+  lint_css:
+    docker:
+      - image: circleci/node:8.9.2
+    working_directory: ~/circleci-deployment
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: lint css
+          command: yarn lint:css
+      - run:
+          name: lint scss
+          command: yarn lint:scss
+  lint_js:
+    docker:
+      - image: circleci/node:8.9.2
+    working_directory: ~/circleci-deployment
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: lint js
+          command: yarn lint:js
+  security:
+    docker:
+      - image: circleci/node:8.9.2
+    working_directory: ~/circleci-deployment
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - yarn-cache-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - run:
+          name: test security
+          command: yarn test:security
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - install_dependencies
+      - lint_css:
+          requires:
+            - install_dependencies
+      - lint_js:
+          requires:
+            - install_dependencies
+      - security:
+          requires:
+            - install_dependencies
