@@ -21,14 +21,14 @@ const MainLayout = ({children, data}: Props) => {
       <Header>
         <h1 className="mv0 tc">{title}</h1>
       </Header>
-
-      {children()}
+      {// $FlowIgnore
+      children()}
     </div>
   )
 }
 
 export default MainLayout
-
+// $FlowIgnore
 export const pageQuery = graphql`
   query mainLayoutQuery {
     site {

@@ -4,7 +4,8 @@ import * as React from 'react'
 let stylesStr
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`) // eslint-disable-line
+    // $FlowIgnore
+    stylesStr = require('!raw-loader!../public/styles.css') // eslint-disable-line
   } catch (e) {
     console.log(e)
   }
