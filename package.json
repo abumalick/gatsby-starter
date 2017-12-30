@@ -1,6 +1,7 @@
 {
   "name": "gatsby-starter",
-  "description": "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
+  "description":
+    "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
   "version": "1.0.0",
   "author": "abumalick",
   "license": "Unlicense",
@@ -12,7 +13,8 @@
     "lint:scss": "stylelint --syntax=scss ./src/**/*.scss",
     "lint:js": "eslint . && flow .",
     "precommit": "lint-staged",
-    "preview": "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
+    "preview":
+      "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
     "start": "gatsby develop -H localhost",
     "test:security": "nsp check"
   },
@@ -22,30 +24,11 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
-      "prettier --write",
-      "eslint",
-      "git add"
-    ],
-    "*.css": [
-      "prettier --write",
-      "stylelint",
-      "git add"
-    ],
-    "*.scss": [
-      "prettier --write",
-      "stylelint --syntax=scss",
-      "git add"
-    ],
-    "*.{md}": [
-      "prettier --write",
-      "git add",
-      "git add"
-    ],
-    "*.{png,jpeg,jpg,gif,svg}": [
-      "imagemin-lint-staged",
-      "git add"
-    ]
+    "*.{js,jsx}": ["prettier --write", "eslint", "flow focus-check", "git add"],
+    "*.css": ["prettier --write", "stylelint", "git add"],
+    "*.scss": ["prettier --write", "stylelint --syntax=scss", "git add"],
+    "*.{md}": ["prettier --write", "git add", "git add"],
+    "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
