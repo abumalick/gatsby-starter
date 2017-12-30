@@ -46,6 +46,7 @@ const HTML = ({
         {css}
       </head>
       <body>
+        {preBodyComponents}
         <div id="___gatsby" dangerouslySetInnerHTML={{__html: body}} />
         {postBodyComponents}
       </body>
