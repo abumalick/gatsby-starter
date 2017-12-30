@@ -11,7 +11,7 @@
     "commit": "git-cz",
     "lint:css": "stylelint ./src/**/*.css",
     "lint:scss": "stylelint --syntax=scss ./src/**/*.scss",
-    "lint:js": "eslint .",
+    "lint:js": "eslint . && flow .",
     "precommit": "lint-staged",
     "preview":
       "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
