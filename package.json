@@ -1,7 +1,6 @@
 {
   "name": "gatsby-starter",
-  "description":
-    "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
+  "description": "A gatsby starter site with eslint, flow, prettier, emotion and tachyons",
   "version": "1.0.0",
   "author": "abumalick",
   "license": "Unlicense",
@@ -13,8 +12,7 @@
     "lint:scss": "stylelint --syntax=scss ./src/**/*.scss",
     "lint:js": "eslint . && flow .",
     "precommit": "lint-staged",
-    "preview":
-      "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
+    "preview": "npm run clean && npm run build && http-server ./public -p 8000 -P http://localhost:8000",
     "start": "gatsby develop -H localhost",
     "test:security": "nsp check"
   },
@@ -24,25 +22,44 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": ["prettier --write", "eslint", "git add"],
-    "*.css": ["prettier --write", "stylelint", "git add"],
-    "*.scss": ["prettier --write", "stylelint --syntax=scss", "git add"],
-    "*.{md}": ["prettier --write", "git add", "git add"],
-    "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ],
+    "*.css": [
+      "prettier --write",
+      "stylelint",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "stylelint --syntax=scss",
+      "git add"
+    ],
+    "*.{md}": [
+      "prettier --write",
+      "git add",
+      "git add"
+    ],
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged",
+      "git add"
+    ]
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.0.1",
-    "babel-plugin-flow-react-proptypes": "^8.0.0",
+    "babel-eslint": "^8.1.2",
+    "babel-plugin-flow-react-proptypes": "^13.0.1",
     "babel-preset-flow": "^6.23.0",
     "emotion": "^8.0.9",
     "emotion-server": "^8.0.9",
-    "flow-bin": "^0.58.0",
-    "gatsby": "^1.9.119",
-    "gatsby-link": "^1.6.28",
-    "gatsby-plugin-emotion": "^1.1.8",
-    "gatsby-plugin-netlify": "^1.0.8",
-    "gatsby-plugin-react-helmet": "^2.0.1",
+    "flow-bin": "^0.62.0",
+    "gatsby": "^1.9.149",
+    "gatsby-link": "^1.6.32",
+    "gatsby-plugin-emotion": "^1.1.10",
+    "gatsby-plugin-netlify": "^1.0.12",
+    "gatsby-plugin-react-helmet": "^2.0.3",
     "prop-types": "^15.5.10",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
@@ -55,19 +72,19 @@
   "devDependencies": {
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.1.0",
-    "eslint": "^3.19.0 || ^4.3.0",
-    "eslint-config-airbnb": "^15.1.0",
+    "eslint": "^4.14.0",
+    "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.1.0",
     "husky": "^0.14.3",
     "imagemin-lint-staged": "^0.3.0",
     "lint-staged": "^6.0.0",
     "nsp": "^3.1.0",
-    "stylelint": "^8.3.1",
-    "stylelint-config-primer": "^2.2.2",
-    "prettier": "^1.9.1"
+    "prettier": "^1.9.2",
+    "stylelint": "^8.4.0",
+    "stylelint-config-primer": "^2.2.3"
   }
 }
